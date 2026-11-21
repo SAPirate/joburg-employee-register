@@ -192,6 +192,11 @@ td strong { color: var(--ink); font-weight: 600; }
 .password-input:focus-within .password-toggle { border-color: #78a38a; }
 .login-card .password-input input, .login-card .password-toggle { min-height: 44px; }
 .login-footnote { margin: 20px 0 0; color: #8a938c; font-size: 10px; line-height: 1.5; text-align: center; }
+.small-button { min-height: 34px; min-width: 92px; padding: 0 10px; white-space: nowrap; }
+.employees-panel table { min-width: 920px; }
+.employees-panel th:last-child,
+.employees-panel td:last-child { width: 112px; text-align: center; }
+.employees-panel td:last-child { padding-right: 12px; padding-left: 12px; }
 
 @media (max-width: 920px) {
   .layout { grid-template-columns: 1fr; gap: 14px; padding-top: 22px; }
