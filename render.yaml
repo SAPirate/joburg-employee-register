@@ -1,0 +1,21 @@
+services:
+  - type: web
+    name: joburg-employee-register
+    runtime: node
+    plan: starter
+    buildCommand: npm install
+    startCommand: npm start
+    healthCheckPath: /api/health
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: DATABASE_PATH
+        value: /var/data/attendance.sqlite
+      - key: APP_ORIGIN
+        sync: false
+      - key: TRUST_PROXY
+        value: "1"
+    disk:
+      name: attendance-data
+      mountPath: /var/data
+      sizeGB: 1
